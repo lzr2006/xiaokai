@@ -10,6 +10,7 @@ import sys
 sys.path.append('C:\\users\\administrator\\desktop\\XiaoKai\\packages')
 #引入其他轮子
 import XKrandom
+import XKtranslation
 #定义列表区
 hello=['hi','hello','你好','你好啊','你好哇','您好','您好啊','嗨','嘿']
 
@@ -54,9 +55,16 @@ while True:
                     XKrandom.math()
                 elif user_input == '退出':
                     i = 1
+                elif user_input == '帮助':
+                    XKrandom.help()
                 else:
                     print('没有这个操作...')
+        elif user_import == '翻译':
+            print('仅仅是调用接口，如需大批量翻译请勿使用本程序！')
+            XKtranslation.main()
+            break
 
+            
             
 
 
