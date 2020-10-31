@@ -33,8 +33,11 @@ def restart():
 
 #程序主体-----------------------------------------程序主体#
 while True:
+    e = t.localtime()
     restart()    
-    user_import = input("toy's world>")    # 输入内容
+    user_import = input("toy's world>")# 输入内容
+    f = open('C:\\users\\administrator\\desktop\\xiaokai\\logs\\input.txt','a')
+    f.write(str(e[0]) + '年' + str(e[1]) + '月' + str(e[2]) + '日' + str(e[3]) + '时' + str(e[4]) + '分' + str(e[5]) + '秒' + ':' + (user_import + '\n'))
     for hello0 in hello: #问好模块
         if user_import == hello0: #判断模块
             print(hello[s.randint(0,8)])  #随机输出
@@ -60,10 +63,13 @@ while True:
                 user_input = input('toysworld\\math-system>')
                 if user_input == '计算平均数':
                     XKmath.meaner()
-                elif user_input == '计算器' or '计算':
+                elif user_input == '计算器':
                     XKmath.calc.go()
-                elif user_input == ' 返回':
+                elif user_input == '返回':
                      m = 1
+                     break
+                else:
+                    print(f'"{user_input}"并不是小恺数学标准库中的函数,也不是可执行的命令.')
         elif user_import == '翻译':
             print('仅仅是调用接口，如需大批量翻译请勿使用本程序！')
             XKtranslation.main()
