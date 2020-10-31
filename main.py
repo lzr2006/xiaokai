@@ -12,6 +12,8 @@ sys.path.append('C:\\users\\administrator\\desktop\\XiaoKai\\packages')
 import XKrandom
 import XKtranslation
 import XKsettings
+import XKmath
+
 #定义列表区
 hello=['hi','hello','你好','你好啊','你好哇','您好','您好啊','嗨','嘿']
 
@@ -25,6 +27,8 @@ print("版权所有 (C) toy's world corporation 。 保留所有权利。") #输
 def restart():
     global i
     i = 0
+    global m
+    m = 0
 
 
 #程序主体-----------------------------------------程序主体#
@@ -45,16 +49,24 @@ while True:
                     XKrandom.sorting()
                 elif user_input == '随机出题':
                     XKrandom.math()
-                elif user_input == '退出':
+                elif user_input == '返回':
                     i = 1
                 elif user_input == '帮助':
                     XKrandom.help()
                 else:
                     print('没有这个操作...')
+        elif user_import == '数学':
+            while m == 0:
+                user_input = input('toysworld\\math-system>')
+                if user_input == '计算平均数':
+                    XKmath.meaner()
+                elif user_input == '计算器' or '计算':
+                    XKmath.calc.go()
+                elif user_input == ' 返回':
+                     m = 1
         elif user_import == '翻译':
             print('仅仅是调用接口，如需大批量翻译请勿使用本程序！')
             XKtranslation.main()
             break
         elif user_import == '配置':
             XKsettings.do.todo()
-
