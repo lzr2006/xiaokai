@@ -53,3 +53,7 @@ class do():
                 i = 1
             else:
                 print(f"'{user}'并不是可行的模式,也不是可执行的命令.")
+
+if __name__ == '__main__':
+    print("Xiao Kai System Error: \nError1:\nCan't do it. \n(The last calling):小恺配置模块:请勿直接调用!")
+
