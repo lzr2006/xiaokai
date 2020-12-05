@@ -94,3 +94,5 @@ except ValueError as reason:
     f = open("C:\\users\\administrator\\desktop\\xiaokai\\logs\\Errors.nlg","w")
     f.write("ValueError" + "\n" + str(reason))
     f.close()
+except FileNotFoundError:
+    os.system('mkdir C:\\users\\administrator\\desktop\\xiaokai\\logs')
